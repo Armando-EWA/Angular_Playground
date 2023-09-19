@@ -23,12 +23,10 @@ export class SerialConnectorComponent implements OnInit {
       (data) => {
         console.log('Simple GET request succeeded'); // Debugging line
         console.log(data); // Debugging line
-        // Handle the response data here
       },
       (error) => {
         console.error('Simple GET request failed'); // Debugging line
         console.error(error); // Debugging line
-        // Handle errors here
       }
     );
   }
@@ -62,7 +60,7 @@ export class SerialConnectorComponent implements OnInit {
     console.log(`Attempting to open port ${portName}`);
 
     // Make a POST request to open the port.
-    // Subscribe to handle successful and error cases.
+
     this.http.post(`serialcomm/open-port`, portName).subscribe(
       data => {
         // Handle successful response
